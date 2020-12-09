@@ -41,13 +41,10 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="<?php echo base_url();?>reportes/Ventas">
                             <i class="fa fa-print"></i> <span>Reportes</span>
                             <span class="pull-right-container"></span>
                         </a>
-                        <ul class="treeview-menu">
-                            <li><a href="<?php echo base_url();?>reportes/ventas"><i class="fa fa-circle-o"></i> Ventas</a></li>
-                        </ul>
                     </li>
                     <li>
                         <a href="#">

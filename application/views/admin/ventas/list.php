@@ -15,7 +15,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="<?php echo base_url();?>movimientos/ventas/add" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span> Agregar Venta</a>
+                        <a href="<?php echo base_url();?>movimientos/ventas/add" class="btn btn-primary btn-flat"><span class="fa fa-plus"></span>Agregar Venta</a>
                     </div>
                 </div>
                 <hr>
@@ -42,7 +42,7 @@
                                             <td><?php echo $venta->fechaActualizacion;?></td>
                                             <td><?php echo $venta->total;?></td>
                                             <td>
-                                                <button type="button" class="btn btn-info btn-view-venta" value="<?php echo $venta->idventa;?>" data-toggle="modal" data-target="#modal-default"><span class="fa fa-search"></span></button>
+                                                <button type="button" class="btn btn-primary btn-view-venta" value="<?php echo $venta->idventa;?>" data-toggle="modal" data-target="#modal-default">Imprimir</button>
                                             </td>
                                         </tr>
                                     <?php endforeach;?>

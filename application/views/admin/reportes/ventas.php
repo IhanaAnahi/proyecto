@@ -1,4 +1,3 @@
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -39,6 +38,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Nombre Cliente</th>
+                                    <th>CI</th>
                                     <th>Tipo Comprobante</th>
                                     <th>Fecha</th>
                                     <th>Total</th>
@@ -48,14 +48,14 @@
                                 <?php if (!empty($ventas)): ?>
                                     <?php foreach($ventas as $venta):?>
                                         <tr>
-                                            <td><?php echo $venta->id;?></td>
+                                            <td><?php echo $venta->idventa;?></td>
                                             <td><?php echo $venta->nombre;?></td>
+                                            <td><?php echo $venta->ci;?></td>
                                             <td><?php echo $venta->tipocomprobante;?></td>
-                                            <td><?php echo $venta->num_documento;?></td>
-                                            <td><?php echo $venta->fecha;?></td>
+                                            <td><?php echo $venta->fechaActualizacion;?></td>
                                             <td><?php echo $venta->total;?></td>
                                             <td>
-                                                <button type="button" class="btn btn-info btn-view-venta" value="<?php echo $venta->id;?>" data-toggle="modal" data-target="#modal-default"><span class="fa fa-search"></span></button>
+                                                <button type="button" class="btn btn-primary btn-print">Imprimir</button>
                                             </td>
                                         </tr>
                                     <?php endforeach;?>
@@ -72,7 +72,6 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-
 <div class="modal fade" id="modal-default">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -82,7 +81,6 @@
         <h4 class="modal-title">Informacion de la venta</h4>
       </div>
       <div class="modal-body">
-        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger pull-left" data-dismiss="modal">Cerrar</button>

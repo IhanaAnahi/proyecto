@@ -1,4 +1,3 @@
-
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -15,7 +14,6 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-12">
-                        
                         <form action="<?php echo base_url();?>movimientos/ventas/store" method="POST" class="form-horizontal">
                             <div class="form-group">
                                 <div class="col-md-3">
@@ -94,7 +92,6 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-
 <div class="modal fade" id="modal-default">
     <div class="modal-dialog">
         <div class="modal-content">

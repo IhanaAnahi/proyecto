@@ -186,7 +186,7 @@ $(document).ready(function () {
             html += "<td><input type='hidden' name='idproducto[]' value='"+infoproducto[0]+"'>"+infoproducto[1]+"</td>";
             html += "<td><input type='hidden' name='precio[]' value='"+infoproducto[2]+"'>"+infoproducto[2]+"</td>";
             html += "<td>"+infoproducto[3]+"</td>";
-            html += "<td><input type='text' name='cantidad' value='1' class='cantidad'></td>";
+            html += "<td><input type='text' name='cantidad[]' value='1' class='cantidad'></td>";
             html += "<td><input type='hidden' name='importes[]' value='"+infoproducto[2]+"'><p>"+infoproducto[2]+"</p></td>";
             html += "<td><button type='button' class='btn btn-danger btn-remove-producto'><span class='fa fa-remove'></span></button></td>";
             html += "</tr>";
@@ -227,6 +227,7 @@ $(document).ready(function () {
     $(document).on("click",".btn-print",function(){
         $("#modal-default .modal-body").print({
             title:"Comprobante de Venta"
+            
         });
     });
 })

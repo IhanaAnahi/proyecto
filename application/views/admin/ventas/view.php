@@ -1,4 +1,3 @@
-
 <div class="row">
 	<div class="col-xs-12 text-center">
 		<b>Tiendas comerciales de 
@@ -9,7 +8,7 @@
 	</div>
 </div> <br>
 <div class="row">
-	<div class="col-xs-6">	
+	<div class="col-xs-6">
 		<b>CLIENTE</b><br>
 		<b>Nombre:</b> <?php echo $venta->nombre;?> <br>
 		<b>Ci:</b> <?php echo $venta->ci;?><br>
