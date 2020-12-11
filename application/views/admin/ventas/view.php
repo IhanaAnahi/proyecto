@@ -12,12 +12,11 @@
 		<b>CLIENTE</b><br>
 		<b>Nombre:</b> <?php echo $venta->nombre;?> <br>
 		<b>Ci:</b> <?php echo $venta->ci;?><br>
-		
 	</div>	
 	<div class="col-xs-6">	
 		<b>COMPROBANTE</b> <br>
 		<b>Tipo de Comprobante:</b> <?php echo $venta->tipocomprobante;?><br>
-		<b>Fecha</b> <?php echo $venta->fecha;?>
+		<b>Fecha</b> <?php echo $venta->fechaActualizacion;?>
 	</div>	
 </div>
 <br>
@@ -46,10 +45,6 @@
 				<tr>
 					<td colspan="4" class="text-right"><strong>Total:</strong></td>
 					<td><?php echo $venta->total;?></td>
-				</tr>
-				<tr>
-					<td colspan="4" class="text-right"><strong>Descuento:</strong></td>
-					<td><?php echo $venta->descuento;?></td>
 				</tr>
 			</tfoot>
 		</table>

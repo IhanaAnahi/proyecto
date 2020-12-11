@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Ventas_model extends CI_Model {
-
+	
 	public function getVentas(){
 		$this->db->select("v.*,c.nombre,c.ci,tc.nombre as tipocomprobante, concat(u.nombre,' ',u.primerApellido,' ',u.segundoApellido) as usu");
 		$this->db->from("venta v");
@@ -33,18 +33,27 @@ class Ventas_model extends CI_Model {
 		}
 	}
 
+	public function getProductosbyDate(){
+		$this->db->select("p.nombre, p.precio, sum(dt.cantidad) as cantidad, sum(dt.importe) as total");
+		$this->db->from("detalleventa dt");
+		$this->db->join("producto p","dt.idproducto = p.idproducto");
+		$this->db->group_by("p.nombre");
+		$resultados = $this->db->get();
+		return $resultados->result();
+	}
+
 	public function getVenta($id){
-	$this->db->select("v.*,c.nombre,tc.nombre as tipocomprobante");
+	$this->db->select("v.*,c.*,tc.nombre as tipocomprobante");
 		$this->db->from("venta v");
-		$this->db->join("cliente c","v.cliente_id = c.id");
+		$this->db->join("cliente c","v.idcliente = c.idcliente");
 		$this->db->join("tipocomprobante tc","v.idtipoComprobante = tc.idtipoComprobante");
-		$this->db->where("v.id",$id);
+		$this->db->where("v.idventa",$id);
 		$resultado = $this->db->get();
 		return $resultado->row();
 	}
 
 	public function getDetalle($id){
-		$this->db->select("dt.*,p.*");
+		$this->db->select("dt.*,p.nombre, p.precio");
 		$this->db->from("detalleventa dt");
 		$this->db->join("producto p","dt.idproducto = p.idproducto");
 		$this->db->where("dt.idventa",$id);

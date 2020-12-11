@@ -54,11 +54,9 @@
                                             <td><?php echo $venta->tipocomprobante;?></td>
                                             <td><?php echo $venta->fechaActualizacion;?></td>
                                             <td><?php echo $venta->total;?></td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary btn-print">Imprimir</button>
-                                            </td>
+                                            
                                         </tr>
-                                    <?php endforeach;?>
+                                    <?php endforeach; //<td><button type="button" class="btn btn-primary btn-print">Imprimir</button></td>?>
                                 <?php endif ?>
                             </tbody>
                         </table>

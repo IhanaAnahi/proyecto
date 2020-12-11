@@ -27,4 +27,15 @@ class Ventas extends CI_Controller {
 		$this->load->view("admin/reportes/ventas",$data);
 		$this->load->view("layouts/footer");
 	}
+
+	public function productos(){
+		$productos = $this->Ventas_model->getProductosbyDate();
+		$data = array(
+			"productos" => $productos
+		);
+		$this->load->view("layouts/header");
+		$this->load->view("layouts/aside");
+		$this->load->view("admin/reportes/productos",$data);
+		$this->load->view("layouts/footer");
+	}
 }
